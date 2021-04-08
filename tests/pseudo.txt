@@ -1,0 +1,44 @@
+// what it should look like maybe
+
+/* eslint-disable */
+import React from 'react';
+
+
+// contains individual animations
+const TestAnimation = () => {
+  // most of this would be very similar to how remotion works
+  const frame = useCurrentFrame()
+  const { width, height, fps, durationInFrames } = useAnimConfig()
+  return (
+    <div
+      style={{
+        width,
+        height,
+        backgroundColor: "#000",
+        opacity: frame/durationInFrames
+      }}
+    >
+      
+    </div>
+  );
+  // this animation is just the screen fading to black over the duration
+}
+
+// sets up all available animations
+const screen = () => {
+  return (
+    <Animation
+      component={TestAnimation}
+      fps={30}
+      durationInFrames={30}
+      // include options for adjustable props
+    />
+  )
+}
+
+
+// would create the server
+registerRelive(screen)
+// gives two urls:
+// localhost:3000/viewer and /remote
+// possibly ngroks it so that it works via mobile?
