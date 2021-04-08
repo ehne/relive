@@ -5,7 +5,14 @@ Deals with loading code and running the server instance.
 Creates a server with two main routes: /ui and /sse.
 
 ## /ui
-displays and renders the live animations.
+displays/renders the live animations and the remote.
+
+###### /ui/viewer
+renders the animations
+
+###### /ui/remote
+controls the rendering of animations
+
 
 ## /sse
 handles communications between the remote ui instance and the viewer instance. (Server Side Events are used, not websockets.)
