@@ -4,12 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.js",
-    "build": "parcel build index.js"
+    "dev": "node index.js",
+    "parcel:dev": "parcel index.html",
+    "parcel:build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.13.13"
+  },
+  "dependencies": {
+    "@tinyhttp/app": "^1.2.21",
+    "@tinyhttp/logger": "^1.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "wouter": "^2.7.4",
     "parcel-bundler": "^1.12.5"
   }
 }
