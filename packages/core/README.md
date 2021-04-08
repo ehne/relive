@@ -9,3 +9,9 @@ displays and renders the live animations.
 
 ## /sse
 handles communications between the remote ui instance and the viewer instance. (Server Side Events are used, not websockets.)
+
+#### /sse/events (GET)
+returns the eventstream
+
+#### /sse/toggle/:animName (POST)
+toggles whether or not the animName is playing
