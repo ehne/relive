@@ -7,7 +7,7 @@ A live animation system, powered by React.
 
 ## Goals
 * Work 95% of the time.
-* Be extremely easy to set up.
+* Be extremely easy to set up. Look at tests/pseudo.txt for how it *might* work.
 * Require a maximum of one (1) js file for it to work on your end.
 * Ideally it should just be: `npx relive index.jsx`
 * Have the delay between starting an animation on the remote and it playing in the viewer be fast enough that it's basically real time.
