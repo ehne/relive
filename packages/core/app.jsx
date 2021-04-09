@@ -4,7 +4,7 @@ import {
   Link, Route, Switch, Router,
 } from 'wouter';
 
-const App = () => {
+const App = ({ comp }) => {
   const [listening, setListening] = useState(false);
   const [currentlyPlayingAnims, setCurrentlyPlayingAnims] = useState([]);
 
@@ -33,6 +33,7 @@ const App = () => {
         <Route>
           <Link href="/viewer">Viewer</Link>
           <Link href="/remote">Remote</Link>
+          {comp}
         </Route>
       </Switch>
     </Router>

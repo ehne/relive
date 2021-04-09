@@ -1,6 +1,6 @@
 {
   "name": "@relive/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,9 @@
   "dependencies": {
     "@tinyhttp/app": "^1.2.21",
     "@tinyhttp/logger": "^1.2.3",
+    "parcel-bundler": "^1.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "wouter": "^2.7.4",
-    "parcel-bundler": "^1.12.5"
+    "wouter": "^2.7.4"
   }
 }
