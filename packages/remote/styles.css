@@ -127,7 +127,6 @@ main {
 .card {
 	padding: var(--textFrameY);
 	background-color: var(--c-overlay);
-	margin-bottom: var(--space-m);
 }
 
 .animName {
