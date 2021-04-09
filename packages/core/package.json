@@ -9,7 +9,6 @@
     "parcel:build": "parcel build index.html"
   },
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
