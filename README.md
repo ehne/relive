@@ -18,3 +18,5 @@ A live animation system, powered by React.
 
 ---
 > [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+> 
+> Relive is pronounced like React and Live-streaming squished together.
