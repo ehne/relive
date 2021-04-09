@@ -13,6 +13,8 @@ A live animation system, powered by React.
 * Have the delay between starting an animation on the remote and it playing in the viewer be fast enough that it's basically real time.
 * All code should be easy to understand and well commented.
 
+## Previous Art
+* [Remotion](https://www.remotion.dev/) basically the same as what Relive aims to achieve, but for static video. A lot of Relive's API is based on Remotion's.
 
 ---
 > [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
