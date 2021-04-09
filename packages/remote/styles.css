@@ -91,6 +91,7 @@ body.darkMode {
   --c-buttonBg: var(--c-grey6);
 }
 
+
 html, body{
 	height:100%;
 	background-color: var(--c-background);
@@ -99,11 +100,29 @@ html, body{
 }
 
 main {
-	max-width: 400px;
+	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: var(--space-l)
+	padding: var(--space-l);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: var(--space-l)
 }
+/* grid sizing based on material guidelines */
+/* less than 960 */
+@media screen and (max-width: 960px) {
+	main {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+/* less than 600 */
+@media screen and (max-width: 600px) {
+	main {
+		grid-template-columns: repeat(1, 1fr);
+	grid-gap: var(--space-m)
+	}
+}
+
 
 .card {
 	padding: var(--textFrameY);
