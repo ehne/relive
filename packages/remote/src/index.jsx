@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Card from './components/Card';
 
-const HelloMessage = ({ name }) => (
-  <div>
-    Hello
-    {name}
-  </div>
+const Main = () => (
+  <main>
+    <Card title="cool" callbackFn={()=>{console.log('hello')}} />
+  </main>
 );
 
-const mountNode = document.getElementById('app');
-ReactDOM.render(<HelloMessage name="Jane" />, mountNode);
+export default Main;

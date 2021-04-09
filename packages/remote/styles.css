@@ -126,12 +126,10 @@ main {
 	border: none;
 	font-size: var(--text-s);
 	letter-spacing: .03em;
-	transition: filter .2s
+	transition: filter .2s;
+  cursor: pointer;
 }
 
-.action.-enabled:hover {
-	filter: brightness(1.1);
-}
 .action.-enabled:active{
 	filter: brightness(0.9)
 }
