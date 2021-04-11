@@ -4,7 +4,7 @@
   "description": "A live animation system, powered by React.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "lerna run build && lerna bootstrap"
   },
   "repository": {
     "type": "git",
