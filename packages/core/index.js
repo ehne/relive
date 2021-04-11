@@ -4,49 +4,33 @@ const { App } = require('@tinyhttp/app');
 const { logger } = require('@tinyhttp/logger');
 const { readdirSync, readFileSync } = require('fs');
 
-// Remote SUBAPP
-const remoteApp = new App();
-const remoteBundler = new Bundler('remote.html', { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/remote' });
-
 console.log('running app on http://localhost:3000');
 
-remoteApp
-  .get('/app.*.js', (_req, res) => {
-    console.log('requested app.js');
+const generateReactApp = (app, path) => {
+  const bundler = new Bundler(`${path}.html`, { production: process.env.NODE_ENV === 'production', publicUrl: `/ui/${path}` });
+
+  const jsPassThroughHandler = (filePrefix, fileSuffix) => ((_req, res) => {
     // basically this just makes it so that parcel actually can access its files
     // good grief it's a gross way of doing it though.
-    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js') && fn.startsWith('app.'))[0];
+    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith(fileSuffix) && fn.startsWith(filePrefix))[0];
     const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
     res.set('Content-Type', 'text/javascript').send(jsContents.toString());
-  })
-  .get('/app.*.js.map', (_req, res) => {
-    console.log('requested app.js.map');
-    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js.map') && fn.startsWith('app.'))[0];
-    const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
-    res.set('Content-Type', 'text/javascript').send(jsContents.toString());
-  })
-  .use(remoteBundler.middleware());
+  });
+
+  app
+    .get('/app.*.js', jsPassThroughHandler('app.', '.js'))
+    .get('/app.*.js.map', jsPassThroughHandler('app.', '.js.map'))
+    .use(bundler.middleware());
+};
+
+// Remote SUBAPP
+const remoteApp = new App();
+generateReactApp(remoteApp, 'remote');
 
 // Viewer SUBAPP
 const viewerApp = new App();
-const viewerBundler = new Bundler('viewer.html', { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/viewer' });
+generateReactApp(viewerApp, 'viewer');
 
-viewerApp
-  .get('/app.*.js', (_req, res) => {
-    console.log('requested app.js');
-    // basically this just makes it so that parcel actually can access its files
-    // good grief it's a gross way of doing it though.
-    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js') && fn.startsWith('app.'))[0];
-    const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
-    res.set('Content-Type', 'text/javascript').send(jsContents.toString());
-  })
-  .get('/app.*.js.map', (_req, res) => {
-    console.log('requested app.js.map');
-    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js.map') && fn.startsWith('app.'))[0];
-    const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
-    res.set('Content-Type', 'text/javascript').send(jsContents.toString());
-  })
-  .use(viewerBundler.middleware());
 // SERVER SIDE EVENTS STUFF
 // (sockets are hard in the system i have set up lol)
 const sseApp = new App();
