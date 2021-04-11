@@ -15,6 +15,7 @@
     "@babel/preset-react": "^7.13.13"
   },
   "dependencies": {
+    "@relive/remote": "^0.0.1",
     "@tinyhttp/app": "^1.2.21",
     "@tinyhttp/logger": "^1.2.3",
     "parcel-bundler": "^1.12.5",

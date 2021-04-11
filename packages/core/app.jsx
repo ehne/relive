@@ -4,6 +4,8 @@ import {
   Link, Route, Switch, Router,
 } from 'wouter';
 
+import RemoteUI from '@relive/remote';
+
 const App = ({ comp }) => {
   const [listening, setListening] = useState(false);
   const [currentlyPlayingAnims, setCurrentlyPlayingAnims] = useState([]);
@@ -29,7 +31,7 @@ const App = ({ comp }) => {
           viewer
           {JSON.stringify(currentlyPlayingAnims)}
         </Route>
-        <Route path="/remote">remote</Route>
+        <Route path="/remote"><RemoteUI /></Route>
         <Route>
           <Link href="/viewer">Viewer</Link>
           <Link href="/remote">Remote</Link>
