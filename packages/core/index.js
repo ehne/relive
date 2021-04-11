@@ -4,16 +4,13 @@ const { App } = require('@tinyhttp/app');
 const { logger } = require('@tinyhttp/logger');
 const { readdirSync, readFileSync } = require('fs');
 
-// UI SUBAPP
-const uiApp = new App();
-
-const file = 'index.html';
-const opts = { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/' };
-const bundlerMiddleware = new Bundler(file, opts);
+// Remote SUBAPP
+const remoteApp = new App();
+const remoteBundler = new Bundler('remote.html', { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/remote' });
 
 console.log('running app on http://localhost:3000');
 
-uiApp
+remoteApp
   .get('/app.*.js', (_req, res) => {
     console.log('requested app.js');
     // basically this just makes it so that parcel actually can access its files
@@ -28,8 +25,28 @@ uiApp
     const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
     res.set('Content-Type', 'text/javascript').send(jsContents.toString());
   })
-  .use(bundlerMiddleware.middleware());
+  .use(remoteBundler.middleware());
 
+// Viewer SUBAPP
+const viewerApp = new App();
+const viewerBundler = new Bundler('viewer.html', { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/viewer' });
+
+viewerApp
+  .get('/app.*.js', (_req, res) => {
+    console.log('requested app.js');
+    // basically this just makes it so that parcel actually can access its files
+    // good grief it's a gross way of doing it though.
+    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js') && fn.startsWith('app.'))[0];
+    const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
+    res.set('Content-Type', 'text/javascript').send(jsContents.toString());
+  })
+  .get('/app.*.js.map', (_req, res) => {
+    console.log('requested app.js.map');
+    const jsFile = readdirSync(`${process.cwd()}/dist/`).filter((fn) => fn.endsWith('.js.map') && fn.startsWith('app.'))[0];
+    const jsContents = readFileSync(`${process.cwd()}/dist/${jsFile}`);
+    res.set('Content-Type', 'text/javascript').send(jsContents.toString());
+  })
+  .use(viewerBundler.middleware());
 // SERVER SIDE EVENTS STUFF
 // (sockets are hard in the system i have set up lol)
 const sseApp = new App();
@@ -86,9 +103,10 @@ sseApp
 const mainApp = new App();
 mainApp
   .use(logger())
-  .use('/ui', uiApp)
+  .use('/ui/remote', remoteApp)
+  .use('/ui/viewer', viewerApp)
   .use('/sse', sseApp)
   .get('/', (_, res) => {
-    res.send('huh');
+    res.send('<a href="/ui/viewer">viewer</a> <a href="/ui/remote">remote</a>');
   })
   .listen(3000);

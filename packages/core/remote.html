@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relive</title>
+  <link rel="icon" 
+      type="image/png" 
+      href="https://raw.githubusercontent.com/ehne/relive/main/design-assets/relive-chip.png">
+  <style>
+    @import url('https://rsms.me/inter/inter.css');
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+:root {
+	/* generated with shaper by hihayk */
+	--baseTextSize: 0.9rem;
+--textSizeIncrement: 1.23;
+
+--text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
+--text-s: var(--baseTextSize);
+--text-m: calc(var(--text-s) * var(--textSizeIncrement));
+--text-l: calc(var(--text-m) * var(--textSizeIncrement));
+--text-xl: calc(var(--text-l) * var(--textSizeIncrement));
+
+--lineHeightFixedAmount: 0.35rem;
+--lineHeightRelativeAmount: 1.1em;
+--globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
+	
+	--unit: 0.5rem;
+--spaceIncrement: 1.65;
+
+--space-s: var(--unit);
+--space-m: calc(var(--space-s) * var(--spaceIncrement));
+--space-l: calc(var(--space-m) * var(--spaceIncrement));
+--space-xl: calc(var(--space-l) * var(--spaceIncrement));
+--space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
+--space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
+--space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
+	
+	--textFrameRatio: 2.37;
+--textFrameY: 0.8em;
+--textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
+	
+	--accentH: 0;
+--accentS: 100%;
+--accentL: 50%;
+--c-accent: hsl(var(--accentH), var(--accentS), var(--accentL));
+--c-accentContrasted: hsl(var(--accentH), var(--accentS), 95%);
+
+--greyH: var(--accentH);
+--greyS: 6%;
+--initialGreyLightness: 93%;
+--greyscaleLightnessIncrement: 11.3%;
+
+--grey1L:  var(--initialGreyLightness);
+--grey2L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1);
+--grey3L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2);
+--grey4L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3);
+--grey5L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4);
+--grey6L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5);
+--grey7L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6);
+--grey8L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7);
+
+--c-grey1: hsl(var(--greyH), var(--greyS), var(--grey1L));
+--c-grey2: hsl(var(--greyH), var(--greyS), var(--grey2L));
+--c-grey3: hsl(var(--greyH), var(--greyS), var(--grey3L));
+--c-grey4: hsl(var(--greyH), var(--greyS), var(--grey4L));
+--c-grey5: hsl(var(--greyH), var(--greyS), var(--grey5L));
+--c-grey6: hsl(var(--greyH), var(--greyS), var(--grey6L));
+--c-grey7: hsl(var(--greyH), var(--greyS), var(--grey7L));
+--c-grey8: hsl(var(--greyH), var(--greyS), var(--grey8L));
+
+--c-border: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1);
+--c-overlay: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.07);
+--c-background: white;
+--c-body: var(--c-grey8);
+--c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5);
+--c-fieldBorder: var(--c-grey2);
+--c-buttonBg: var(--c-grey2);
+	
+	--radius: 0rem;
+
+--fieldBorderWidth: 1px;
+	
+	
+}
+
+body.darkMode {
+  --c-border: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.1);
+  --c-overlay: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.07);
+  --c-background: var(--c-grey8);
+  --c-body: var(--c-grey1);
+  --c-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.5);
+  --c-fieldBorder: var(--c-grey6);
+  --c-buttonBg: var(--c-grey6);
+}
+
+
+html, body{
+	height:100%;
+	background-color: var(--c-background);
+	color: var(--c-body);
+	font-size: var(--baseTextSize)
+}
+
+main {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: var(--space-l);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: var(--space-l)
+}
+/* grid sizing based on material guidelines */
+/* less than 960 */
+@media screen and (max-width: 960px) {
+	main {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+/* less than 600 */
+@media screen and (max-width: 600px) {
+	main {
+		grid-template-columns: repeat(1, 1fr);
+	grid-gap: var(--space-m)
+	}
+}
+
+
+.card {
+	padding: var(--textFrameY);
+	background-color: var(--c-overlay);
+}
+
+.animName {
+	margin-bottom: var(--space-m);
+	font-size: var(--text-m);
+	font-weight: 600;
+}
+
+.action {
+	background-color: var(--c-accent);
+	color: var(--c-accentContrasted);
+	padding: var(--textFrameY) var(--textFrameX);
+	text-align: center;
+	width: 100%;
+	border: none;
+	font-size: var(--text-s);
+	letter-spacing: .03em;
+	transition: filter .2s;
+  cursor: pointer;
+}
+
+.action.-enabled:active{
+	filter: brightness(0.9)
+}
+
+.action.-disabled {
+	color: var(--c-bodyDimmed);
+	background-color: var(--c-buttonBg)
+}
+
+.darkmodeToggle {
+	text-align: center;
+	cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+        <script src="app.jsx"></script>
+        <script>
+					function toggleDarkMode() {
+							// toggle code goes here
+							const body = document.querySelector('body');
+							body.classList.toggle('darkMode');
+							console.log('toggleDarkMode', 'should\'ve added .darkMode now');
+					}
+					if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+							toggleDarkMode()
+					}
+			</script>
+</body>
+</html>
