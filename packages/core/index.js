@@ -6,8 +6,9 @@ const { readdirSync, readFileSync } = require('fs');
 
 console.log('running app on http://localhost:3000');
 
+// function to setup the tinyhttp stuff for a parcel bundled react app to work.
 const generateReactApp = (app, path) => {
-  const bundler = new Bundler(`${path}.html`, { production: process.env.NODE_ENV === 'production', publicUrl: `/ui/${path}` });
+  const bundler = new Bundler(`${path}.html`, { production: process.env.NODE_ENV === 'production', publicUrl: '/ui/' });
 
   const jsPassThroughHandler = (filePrefix, fileSuffix) => ((_req, res) => {
     // basically this just makes it so that parcel actually can access its files
@@ -23,13 +24,9 @@ const generateReactApp = (app, path) => {
     .use(bundler.middleware());
 };
 
-// Remote SUBAPP
-const remoteApp = new App();
-generateReactApp(remoteApp, 'remote');
-
-// Viewer SUBAPP
-const viewerApp = new App();
-generateReactApp(viewerApp, 'viewer');
+// UI SUBAPP
+const uiApp = new App();
+generateReactApp(uiApp, 'index');
 
 // SERVER SIDE EVENTS STUFF
 // (sockets are hard in the system i have set up lol)
@@ -87,8 +84,7 @@ sseApp
 const mainApp = new App();
 mainApp
   .use(logger())
-  .use('/ui/remote', remoteApp)
-  .use('/ui/viewer', viewerApp)
+  .use('/ui/', uiApp)
   .use('/sse', sseApp)
   .get('/', (_, res) => {
     res.send('<a href="/ui/viewer">viewer</a> <a href="/ui/remote">remote</a>');
