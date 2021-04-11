@@ -3,7 +3,7 @@ import Card from './components/Card';
 
 const Main = () => (
   <main>
-    <Card title="cool" callbackFn={()=>{console.log('hello')}} />
+    <Card title="cool" callbackFn={() => {}} />
   </main>
 );
 
