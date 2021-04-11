@@ -4,10 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "parcel:dev": "parcel index.html",
-    "build": "babel src -d dist",
-    "parcel:build": "parcel build src/index.jsx"
+    "dev": "parcel index.html",
+    "build": "babel src -d dist"
   },
   "author": "",
   "dependencies": {

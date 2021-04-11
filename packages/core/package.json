@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "parcel:dev": "parcel index.html",
-    "parcel:build": "parcel build index.html"
+    "dev": "node index.js"
   },
   "author": "",
   "devDependencies": {
