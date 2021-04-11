@@ -13,6 +13,13 @@ A live animation system, powered by React.
 * Have the delay between starting an animation on the remote and it playing in the viewer be fast enough that it's basically real time.
 * All code should be easy to understand and well commented.
 
+## Status
+- [x] Get communication between Remote and Viewer routes working.
+- [x] Create UI for remote route.
+- [ ] Create viewer React code.
+- [ ] Figure out how to make the viewer play animations.
+- [ ] Create CLI for Relive.
+
 ## Previous Art
 * [Remotion](https://www.remotion.dev/) basically the same as what Relive aims to achieve, but for static video. A lot of Relive's API is based on Remotion's.
 
