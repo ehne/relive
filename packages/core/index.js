@@ -72,7 +72,7 @@ sseApp
       clients = clients.filter((client) => client.id !== clientId);
     });
   })
-  .post('/toggle/:anim', (_req, res) => {
+  .get('/toggle/:anim', (_req, res) => {
     const animationID = _req.params.anim;
     toggle(activeAnims, animationID);
     sendEventsToAll(activeAnims);
