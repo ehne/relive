@@ -19,6 +19,7 @@ A live animation system, powered by React.
 - [ ] Create viewer React code.
 - [ ] Figure out how to make the viewer play animations.
 - [ ] Create CLI for Relive.
+- [ ] Docs.
 
 ## Previous Art
 * [Remotion](https://www.remotion.dev/) basically the same as what Relive aims to achieve, but for static video. A lot of Relive's API is based on Remotion's.
