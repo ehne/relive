@@ -1,0 +1,41 @@
+{
+  "name": "@relive/cli",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "@ehne on github",
+  "homepage": "https://github.com/ehne/relive/tree/main/packages/cli#readme",
+  "license": "Hippocratic-2.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "bin": {
+    "relive": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehne/relive.git"
+  },
+  "scripts": {
+    "test": "eslint 'src' --ext ts,tsx",
+    "build": "tsc -d && node addBin.cjs"
+  },
+  "bugs": {
+    "url": "https://github.com/ehne/relive/issues"
+  },
+  "dependencies": {
+    "@types/node": "^16.7.10",
+    "esbuild": "^0.12.25",
+    "get-port": "^5.1.1",
+    "node-jet": "^2.1.1",
+    "polka": "^0.5.2",
+    "sade": "^1.7.4",
+    "sirv": "^1.0.17",
+    "xns": "^2.0.7"
+  },
+  "devDependencies": {
+    "@types/sade": "^1.7.3",
+    "ts-node": "^10.2.1"
+  }
+}
