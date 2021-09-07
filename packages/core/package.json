@@ -1,0 +1,23 @@
+{
+  "name": "@relive/core",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Darcy LF <ehnevault@gmail.com>",
+  "homepage": "https://github.com/ehne/relive/tree/main/packages/core#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehne/relive.git"
+  },
+  "scripts": {
+    "test": "eslint 'src' --ext ts,tsx"
+  },
+  "bugs": {
+    "url": "https://github.com/ehne/relive/issues"
+  }
+}
