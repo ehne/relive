@@ -17,6 +17,6 @@ export const registerRelive = (Component) => {
     <Suspense>
       <App/>
     </Suspense>
-    , document.querySelector('#main')
+    , document.querySelector('#reliveMain')
   )
 }
