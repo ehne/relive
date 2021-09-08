@@ -15,9 +15,14 @@
     "url": "git+https://github.com/ehne/relive.git"
   },
   "scripts": {
-    "test": "eslint 'src' --ext ts,tsx"
+    "test": "eslint 'src' --ext ts,tsx",
+    "start": "relive run hi.tsx"
   },
   "bugs": {
     "url": "https://github.com/ehne/relive/issues"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

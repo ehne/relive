@@ -4,9 +4,11 @@ import sirv from 'sirv'
 import jet from 'node-jet'
 import getPort from 'get-port'
 
-export const startServer = async (workingDir:String, userFile:String, port:Number) => {
+import { log } from './log'
+
+export const startServer = async (workingDir:string, userFile:string, port:Number) => {
   // serves static files present in web.
-  const serve = sirv(path.join(__dirname, '..', 'web'))
+  const serve = sirv(path.join(__dirname, '..', 'web'), { single: true, ignores: ['/internalport'] })
   const app = polka()
 
   // sets up Jet daemon
@@ -20,7 +22,7 @@ export const startServer = async (workingDir:String, userFile:String, port:Numbe
       res.end(`${internalPort}`)
     })
     .listen(port, () => {
-      console.log(`> running on localhost:${port}`)
+      log('ui', `running on localhost:${port}`)
     })
 
   // listens in on the daemon
@@ -41,7 +43,6 @@ export const startServer = async (workingDir:String, userFile:String, port:Numbe
 
   // connect to Jet
   peer.connect().then(() => {
-    console.log('connection to Daemon established')
-    console.log('Daemon Info: ', peer.daemonInfo)
+    log('daemon', `connection established on ${internalPort}`)
   })
 }

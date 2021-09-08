@@ -2,8 +2,9 @@ import xns from 'xns'
 import sade from 'sade'
 import getPort from 'get-port'
 import path from 'path'
+
 import { startServer } from './server'
-import { bundler } from './bundle'
+import { bundler } from './bundler'
 
 export const cli = xns(async () => {
   const prog = sade('relive')
