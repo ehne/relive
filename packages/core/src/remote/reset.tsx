@@ -1,3 +1,17 @@
 import { render } from 'react-dom'
 
-export const reset = () => render('hello', document.querySelector('#reliveResetStyles'))
+const reset = () => {
+  render(
+    `
+      @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+      @import url('https://rsms.me/inter/inter.css');
+      html { font-family: 'Inter', sans-serif; }
+      @supports (font-variation-settings: normal) {
+        html { font-family: 'Inter var', sans-serif; }
+      }
+    `,
+    document.querySelector('#reliveResetStyles')
+  )
+}
+
+export { reset }
