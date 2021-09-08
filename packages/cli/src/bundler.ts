@@ -7,6 +7,6 @@ export const bundler = async (inFile:string, outFile:string) => {
     outfile: outFile,
     minify: true,
     sourcemap: true,
-    target: ['chrome58', 'firefox57', 'safari11', 'edge16']
+    target: ['chrome58', 'firefox57', 'safari11']
   })
 }

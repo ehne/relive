@@ -22,7 +22,10 @@
     "url": "https://github.com/ehne/relive/issues"
   },
   "dependencies": {
+    "@relive/cli": "*",
+    "@stitches/react": "^1.0.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "wouter": "^2.7.4"
   }
 }
