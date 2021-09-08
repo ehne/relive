@@ -2,11 +2,13 @@ import React, { Suspense } from 'react'
 import { render } from 'react-dom'
 import { Route } from 'wouter'
 
+import Remote from './remote/Remote'
+
 export const registerRelive = (Component) => {
   const App = () => (
     <>
       <Route path="/">
-        this is where the control panel lives
+        <Remote />
       </Route>
       <Route path="/screen/:name">
         {({ name }) => <div>this is the <b>&quot;{name}&quot;</b> screen</div>}
