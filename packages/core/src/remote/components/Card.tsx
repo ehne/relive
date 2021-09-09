@@ -27,7 +27,7 @@ const Title = styled('h2', {
   color: '$gray1'
 })
 
-const Card = ({ name, jetPeer }:{ name:string, jetPeer }) => {
+const Card = ({ name, jetPeer }:{ name:string, jetPeer, key:string}) => {
   return (
     <CardBase>
       <Row>
@@ -35,7 +35,7 @@ const Card = ({ name, jetPeer }:{ name:string, jetPeer }) => {
         <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer">↗</SceneLink>
       </Row>
       <Row>
-        <Button size="full" color="accent" onClick={() => { jetPeer.call('send', [name]) }}>Send</Button>
+        <Button size="full" color="accent" onClick={() => { jetPeer.call(`send/${name}`, [name]) }}>Send</Button>
       </Row>
     </CardBase>
   )

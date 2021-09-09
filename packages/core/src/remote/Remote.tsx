@@ -17,15 +17,16 @@ const Grid = styled('div', {
   }
 })
 
-const Remote = ({ jetPort }:{ jetPort:string }) => {
+const Remote = ({ jetPort, scenes }:{ jetPort:string, scenes:Record<string, {}> }) => {
   const jetPeer = new jet.Peer({
     // url: `ws://${location.hostname}:${jetPort}`
     port: jetPort
   })
   reset()
+  const sceneCards = Object.keys(scenes).map(i => <Card key={i} name={i} jetPeer={jetPeer} />)
   return (
     <Grid>
-      <Card name="hi" jetPeer={jetPeer}/>
+      {sceneCards}
     </Grid>
   )
 }

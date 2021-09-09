@@ -5,4 +5,8 @@ const cool = () => (
   <div>hello </div>
 )
 
-registerRelive(cool)
+registerRelive({
+  cool: {
+    component: cool
+  }
+})
