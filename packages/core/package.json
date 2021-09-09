@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "eslint 'src' --ext ts,tsx",
-    "start": "relive run test.tsx"
+    "start": "relive run test.tsx",
+    "build": "tsc -d"
   },
   "bugs": {
     "url": "https://github.com/ehne/relive/issues"
