@@ -1,5 +1,5 @@
 {
-  "name": "@relive/core",
+  "name": "@relivecg/core",
   "version": "0.1.2",
   "description": "> TODO: description",
   "author": "@ehne on github",
@@ -34,5 +34,8 @@
     "util": "^0.12.4",
     "wouter": "^2.7.4"
   },
-  "gitHead": "8902ad13810ff8cc715fbbf9df93eafca7596ce2"
+  "gitHead": "969d96e5933d843276b4c39e7ae51b283330364d",
+  "publishConfig": {
+    "access": "public"
+  }
 }

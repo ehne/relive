@@ -1,10 +1,10 @@
 {
-  "name": "@relive/cli",
-  "version": "0.1.0",
+  "name": "@relivecg/cli",
+  "version": "0.1.1",
   "description": "> TODO: description",
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/cli#readme",
-  "license": "Hippocratic-2.1",
+  "license": "ISC",
   "main": "dist/index.js",
   "files": [
     "dist",
@@ -39,5 +39,8 @@
   "devDependencies": {
     "@types/sade": "^1.7.3",
     "esbuild-plugin-node-polyfills": "^1.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
