@@ -11,6 +11,7 @@ export * from './controlFunctions'
 
 const registerRelive = async (components:Record<string, SceneObject>) => {
   const jetPort = await fetch(`http://${window.location.host}/internalport`).then(d => d.text())
+
   const App = () => (
     <>
       <Route path="/">
