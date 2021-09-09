@@ -1,0 +1,61 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ff0000;
+  --ifm-color-primary-dark: #e60000;
+  --ifm-color-primary-darker: #d90000;
+  --ifm-color-primary-darkest: #b30000;
+  --ifm-color-primary-light: #ff1a1a;
+  --ifm-color-primary-lighter: #ff2626;
+  --ifm-color-primary-lightest: #ff4d4d;
+  --ifm-code-font-size: 95%;
+
+  --ifm-background-color: #fff;
+  --ifm-background-surface-color: #F0EFEF;
+  --footer-bg: #252121;
+  --ifm-hero-text-color: #252121;
+  --ifm-font-color-base: #252121;
+  --ifm-navbar-shadow: none;
+  
+}
+html[data-theme='dark'] {
+  --ifm-background-color: #252121;
+  --ifm-background-surface-color: #433D3D;
+  --footer-bg: #0f0d0d;
+  
+}
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color)
+}
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--footer-bg)
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: #252121;
+}
+
+.button--primary {
+  color: #FFE6E5
+}
+
+.button--primary:hover {
+  color: #FFE6E5;
+  opacity: .8;
+}
+
+.navbar__brand {
+  height: 1.5em
+}
