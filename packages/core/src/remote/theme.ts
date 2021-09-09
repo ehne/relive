@@ -33,5 +33,9 @@ export const { styled, css } = createStitches({
       hover: '0.07s opacity linear'
     }
   },
-  prefix: 'relive'
+  prefix: 'relive',
+  media: {
+    bp1: '(max-width: 620px)',
+    bp2: '(max-width: 900px)'
+  }
 })

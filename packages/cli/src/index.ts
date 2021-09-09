@@ -4,7 +4,7 @@ import getPort from 'get-port'
 import path from 'path'
 
 import { startServer } from './server'
-import { bundler } from './bundler'
+import { esBuildBundler as bundler } from './bundler'
 
 export const cli = xns(async () => {
   const prog = sade('relive')
@@ -21,7 +21,7 @@ export const cli = xns(async () => {
         : await getPort({ port: getPort.makeRange(3000, 3100) })
 
       // generate bundle
-      await bundler(src, path.join(__dirname, '..', 'web', 'bundle.js'))
+      await bundler(src, path.join(__dirname, '..', 'web'))
       startServer(process.cwd(), src, port)
       await new Promise(() => undefined)
     })

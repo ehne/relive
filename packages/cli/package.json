@@ -34,10 +34,11 @@
     "polka": "^0.5.2",
     "sade": "^1.7.4",
     "sirv": "^1.0.17",
+
     "xns": "^2.0.7"
   },
   "devDependencies": {
     "@types/sade": "^1.7.3",
-    "ts-node": "^10.2.1"
+    "esbuild-plugin-node-polyfills": "^1.0.2"
   }
 }

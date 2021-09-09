@@ -34,15 +34,15 @@ export const startServer = async (workingDir:string, userFile:string, port:Numbe
   // opens a jet peer to add methods
   const peer = new jet.Peer({ port: internalPort })
 
-  const greet = new jet.Method('greet')
-  greet.on('call', (who) => {
-    console.log('Hello', who)
+  const send = new jet.Method('send')
+  send.on('call', (name) => {
+    log('daemon', `data sent from '${name}' remote`)
   })
 
-  peer.add(greet)
-
-  // connect to Jet
-  peer.connect().then(() => {
+  Promise.all([
+    peer.connect(),
+    peer.add(send)
+  ]).then(() => {
     log('daemon', `connection established on ${internalPort}`)
   })
 }
