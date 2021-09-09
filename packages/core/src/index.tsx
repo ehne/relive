@@ -5,14 +5,12 @@ import { Route } from 'wouter'
 import Scene from './Scene'
 import Remote from './remote/Remote'
 import useRelive from './useRelive'
+import { SceneObject } from './types'
 
-interface SceneObject {
-  component: React.Node
-}
+export * from './controlFunctions'
 
 const registerRelive = async (components:Record<string, SceneObject>) => {
   const jetPort = await fetch(`http://${window.location.host}/internalport`).then(d => d.text())
-
   const App = () => (
     <>
       <Route path="/">

@@ -4,7 +4,7 @@ const Row = styled('div', {
   display: 'flex',
   width: '100%',
   justifyContent: 'space-between',
-  alignItems: 'start',
+  alignItems: 'center',
   height: '$rowHeight',
   marginBottom: '$1',
   '&:not(:last-child)': {
