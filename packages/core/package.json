@@ -1,6 +1,6 @@
 {
   "name": "@relive/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "Darcy LF <ehnevault@gmail.com>",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/core#readme",
@@ -23,7 +23,7 @@
     "url": "https://github.com/ehne/relive/issues"
   },
   "dependencies": {
-    "@relive/cli": "*",
+    "@relive/cli": "^0.1.0",
     "@stitches/react": "^1.0.0",
     "assert": "^2.0.0",
     "events": "^3.3.0",

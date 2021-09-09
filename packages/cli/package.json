@@ -1,6 +1,6 @@
 {
   "name": "@relive/cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/cli#readme",
@@ -34,7 +34,6 @@
     "polka": "^0.5.2",
     "sade": "^1.7.4",
     "sirv": "^1.0.17",
-
     "xns": "^2.0.7"
   },
   "devDependencies": {
