@@ -1,11 +1,5 @@
 # `cli`
 
-> TODO: description
-
 ## Usage
 
-```
-const cli = require('cli');
-
-// TODO: DEMONSTRATE API
-```
+just run `relive` in your terminal

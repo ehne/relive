@@ -1,7 +1,7 @@
 {
   "name": "@relivecg/cli",
   "version": "0.1.3",
-  "description": "> TODO: description",
+  "description": "The CLI for Relive.",
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/cli#readme",
   "license": "ISC",

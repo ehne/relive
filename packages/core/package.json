@@ -1,7 +1,7 @@
 {
   "name": "@relivecg/core",
   "version": "0.1.3",
-  "description": "> TODO: description",
+  "description": "The core components of Relive",
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/core#readme",
   "license": "ISC",
@@ -23,7 +23,6 @@
     "url": "https://github.com/ehne/relive/issues"
   },
   "dependencies": {
-    "@relive/cli": "^0.1.0",
     "@stitches/react": "^1.0.0",
     "assert": "^2.0.0",
     "events": "^3.3.0",
