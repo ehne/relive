@@ -22,7 +22,7 @@ export const startServer = async (workingDir:string, userFile:string, port:Numbe
       res.end(`${internalPort}`)
     })
     .listen(port, () => {
-      log('ui', `running on localhost:${port}`)
+      log('ui', `running on localhost:${port}`, `http://localhost:${port}`)
     })
 
   // listens in on the daemon

@@ -1,7 +1,8 @@
 import chalk from 'chalk'
+import clipboardy from 'clipboardy'
 
 // slightly nicer logging experience
-export const log = (scope: 'ui' | 'daemon', message:string) => {
+export const log = (scope: 'ui' | 'daemon', message:string, toCopy?:string) => {
   let color: chalk.Chalk
   switch (scope) {
     case 'ui':
@@ -12,5 +13,12 @@ export const log = (scope: 'ui' | 'daemon', message:string) => {
       break
   }
   const coloredScope = color(`[${scope}]`)
-  console.log(`${coloredScope} ${message}`)
+
+  let copyMessage = ''
+  if (toCopy) {
+    clipboardy.writeSync(toCopy)
+    copyMessage = chalk.dim(' [Copied to clipboard]')
+  }
+
+  console.log(`${coloredScope} ${message}${copyMessage}`)
 }

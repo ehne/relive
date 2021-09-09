@@ -27,6 +27,7 @@
   "dependencies": {
     "@types/node": "^16.7.10",
     "chalk": "^1.0.0",
+    "clipboardy": "^2.3.0",
     "esbuild": "^0.12.25",
     "get-port": "^5.1.1",
     "node-jet": "^2.1.1",

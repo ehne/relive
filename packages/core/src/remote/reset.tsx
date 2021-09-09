@@ -9,6 +9,11 @@ const reset = () => {
       @supports (font-variation-settings: normal) {
         html { font-family: 'Inter var', sans-serif; }
       }
+      html,body {
+        background-color: #252121;
+        color: #EEEDED;
+        font-size: 16px
+      }
     `,
     document.querySelector('#reliveResetStyles')
   )

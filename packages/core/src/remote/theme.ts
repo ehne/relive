@@ -12,7 +12,9 @@ export const { styled, css } = createStitches({
       gray7: '#433D3D',
       gray8: '#252121',
       accent: '#FF0000',
-      accentContrasted: '#FFE6E5'
+      accentContrasted: '#FFE6E5',
+      layer: 'hsla(0, 5%, 93%, 0.1)',
+      dimmed: 'hsla(0, 5%, 93%, 0.5)'
     },
     space: {
       1: '8px',
@@ -23,6 +25,12 @@ export const { styled, css } = createStitches({
       1: '8px',
       2: '16px',
       3: '32px'
+    },
+    sizes: {
+      rowHeight: '32px'
+    },
+    transitions: {
+      hover: '0.07s opacity linear'
     }
   },
   prefix: 'relive'

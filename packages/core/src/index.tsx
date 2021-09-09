@@ -10,8 +10,8 @@ export const registerRelive = (Component) => {
       <Route path="/">
         <Remote />
       </Route>
-      <Route path="/screen/:name">
-        {({ name }) => <div>this is the <b>&quot;{name}&quot;</b> screen</div>}
+      <Route path="/scene/:name">
+        {({ name }) => <div>this is the <b>&quot;{name}&quot;</b> scene</div>}
       </Route>
     </>
   )
