@@ -4,12 +4,13 @@ import { Route } from 'wouter'
 
 import Scene from './Scene'
 import Remote from './remote/Remote'
+import useRelive from './useRelive'
 
 interface SceneObject {
   component: React.Node
 }
 
-export const registerRelive = async (components:Record<string, SceneObject>) => {
+const registerRelive = async (components:Record<string, SceneObject>) => {
   const jetPort = await fetch(`http://${window.location.host}/internalport`).then(d => d.text())
 
   const App = () => (
@@ -32,4 +33,9 @@ export const registerRelive = async (components:Record<string, SceneObject>) => 
     </Suspense>
     , document.querySelector('#reliveMain')
   )
+}
+
+export {
+  useRelive,
+  registerRelive
 }

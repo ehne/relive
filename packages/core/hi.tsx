@@ -1,9 +1,12 @@
 import React from 'react'
-import { registerRelive } from './src/index'
+import { registerRelive, useRelive } from './src/index'
 
-const cool = () => (
-  <div>hello </div>
-)
+const cool = () => {
+  const { data } = useRelive()
+  return (
+    <div>hello</div>
+  )
+}
 
 registerRelive({
   cool: {

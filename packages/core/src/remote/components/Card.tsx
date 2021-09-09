@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from '../theme'
 import Row from './Row'
 import { Button } from './Buttons'
@@ -28,6 +28,7 @@ const Title = styled('h2', {
 })
 
 const Card = ({ name, jetPeer }:{ name:string, jetPeer, key:string}) => {
+  const [data, setData] = useState({})
   return (
     <CardBase>
       <Row>
@@ -35,7 +36,7 @@ const Card = ({ name, jetPeer }:{ name:string, jetPeer, key:string}) => {
         <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer">↗</SceneLink>
       </Row>
       <Row>
-        <Button size="full" color="accent" onClick={() => { jetPeer.call(`send/${name}`, [name]) }}>Send</Button>
+        <Button size="full" color="accent" onClick={() => { jetPeer.call(`send/${name}`, [data]) }}>Send</Button>
       </Row>
     </CardBase>
   )
