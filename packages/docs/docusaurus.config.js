@@ -4,7 +4,7 @@
   tagline: 'A live animation system for React.',
   url: 'https://ehne.github.io/',
   baseUrl: '/relive/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'ehne', // Usually your GitHub org/user name.
