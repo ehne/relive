@@ -8,7 +8,7 @@ Relive is a broadcast graphics system that uses React. It allows you to write co
 ## Goals
 * Have an insanely high uptime with nearly no frames dropped.
 * Almost zero delay between data being sent and showing up on the animation
-* Be extremely easy to get up and running with. (Have a look at the "hello world" guide).
+* Be extremely easy to get up and running with. (Have a look at the "quickstart" guide).
 * Support broadcasts of any size.
 * Make character generation (the industry term for broadcast graphics) more accessible.
 
