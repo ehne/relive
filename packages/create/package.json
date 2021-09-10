@@ -5,14 +5,19 @@
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/create#readme",
   "license": "ISC",
-  "bin": "index.js",
-  "main": "index.js",
+  "bin": "dist/index.js",
+  "main": "src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ehne/relive.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc -d && node addBin.cjs"
   },
   "bugs": {
     "url": "https://github.com/ehne/relive/issues"

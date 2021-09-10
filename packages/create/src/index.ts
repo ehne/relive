@@ -1,4 +1,3 @@
-#! /usr/bin/env node
 import path from 'path'
 import fs from 'fs'
 import execa from 'execa'
@@ -64,12 +63,11 @@ const create = () => {
   })
 
   console.log(`installing npm modules in ${path.resolve(projectName)}`)
- const promise = execa('npm', ['install'], {
-    cwd: path.resolve(projectName),
-  });
-  promise.stderr.pipe(process.stderr);
-  promise.stdout.pipe(process.stdout);
-  
+  const promise = execa('npm', ['install'], {
+    cwd: path.resolve(projectName)
+  })
+  promise.stderr.pipe(process.stderr)
+  promise.stdout.pipe(process.stdout)
 }
 
 create()
