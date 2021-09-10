@@ -1,0 +1,22 @@
+{
+  "name": "@relivecg/create",
+  "version": "0.1.5",
+  "description": "Relive project scaffholder",
+  "author": "@ehne on github",
+  "homepage": "https://github.com/ehne/relive/tree/main/packages/create#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehne/relive.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ehne/relive/issues"
+  },
+  "dependencies": {
+    "execa": "^5.1.1"
+  }
+}
