@@ -34,13 +34,14 @@ registerRelive({
       "main": "index.jsx",
       "type": "module",
       "scripts": {
-        "start": "npx @relivecg/cli run index.jsx"
+        "start": "relive run index.jsx"
       },
       "keywords": [],
       "author": "",
       "license": "ISC",
       "dependencies": {
-        "@relivecg/core": "*"
+        "@relivecg/core": "*",
+        "@relivecg/cli": "*",
       }
     }
     `
