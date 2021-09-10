@@ -9,12 +9,12 @@ function HomepageHeader () {
   return (
     <header className={clsx('hero')}>
       <div className="container">
-        <h1 className="hero__title">Create Broadcast Graphics Using Just React.</h1>
+        <h1 className="hero__title">Create Broadcast Graphics Using React.</h1>
         <p className="hero__subtitle">{siteConfig.title}: {siteConfig.tagline}</p>
         <div>
           <Link
             className="button button--primary button--lg"
-            to="/docs/intro">
+            to="/docs/quickstart/installing">
             Relive Quickstart - 5min ⏱️
           </Link>
         </div>
@@ -31,6 +31,9 @@ export default function Home () {
       description="A live animation system for React.">
       <HomepageHeader />
       <main>
+        <div>
+        </div>
+
       </main>
     </Layout>
   )

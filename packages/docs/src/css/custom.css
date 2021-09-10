@@ -59,3 +59,6 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .navbar__brand {
   height: 1.5em
 }
+.hero__title {
+  max-width: 15em
+}

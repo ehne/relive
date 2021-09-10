@@ -45,7 +45,7 @@
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'what-is-relive',
             position: 'left',
             label: 'Docs'
           },
@@ -64,8 +64,12 @@
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro'
+                label: 'What is Relive?',
+                to: '/docs/what-is-relive'
+              },
+              {
+                label: 'Quickstart',
+                to: '/docs/quickstart/installing'
               }
             ]
           },
