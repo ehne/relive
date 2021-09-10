@@ -29,6 +29,15 @@
           customCss: require.resolve('./src/css/custom.css')
         }
       }
+    ],
+    [
+      'docusaurus-preset-shiki-twoslash',
+      {
+        themes: ['min-light'],
+        defaultCompilerOptions: {
+          types: ['node']
+        }
+      }
     ]
   ],
 
