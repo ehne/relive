@@ -33,7 +33,7 @@
     "util": "^0.12.4",
     "wouter": "^2.7.4"
   },
-  "gitHead": "969d96e5933d843276b4c39e7ae51b283330364d",
+  "gitHead": "2c5d8c03303fcc98fe0f7c2425014ef9291c4e00",
   "publishConfig": {
     "access": "public"
   }

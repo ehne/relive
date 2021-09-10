@@ -5,6 +5,7 @@
   "author": "@ehne on github",
   "homepage": "https://github.com/ehne/relive/tree/main/packages/create#readme",
   "license": "ISC",
+  "bin": "index.js",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   },
   "dependencies": {
     "execa": "^5.1.1"
+  },
+  "gitHead": "2c5d8c03303fcc98fe0f7c2425014ef9291c4e00",
+  "publishConfig": {
+    "access": "public"
   }
 }
