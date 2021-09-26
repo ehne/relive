@@ -102,7 +102,7 @@ registerRelive({
   sceneName: {
     component: HelloWorld,
     controls: {
-      ... stringControl('name'),
+      name: stringControl(),
     }
   }
 })
