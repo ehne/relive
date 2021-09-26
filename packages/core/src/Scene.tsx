@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import jet from 'node-jet'
 import { SceneContext } from './SceneContext'
+import { ScreenProps } from './types'
 
-interface ScreenProps {
-  name: string,
-  Component: React.Node,
-  jetPort: string
-}
 
 const Scene = ({ name, Component, jetPort }:ScreenProps) => {
   const [jetPeer, setJetPeer] = useState(new jet.Peer({ port: jetPort }))

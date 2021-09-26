@@ -1,5 +1,6 @@
 import React from 'react'
-import { registerRelive, useRelive, stringControl } from './src/index'
+import { registerRelive, useRelive } from './src/index'
+import { numberControl, stringControl } from './src/controls'
 
 const cool = () => {
   const { data, currentFrame, frameLastUpdated } = useRelive()
@@ -12,8 +13,7 @@ registerRelive({
   cool: {
     component: cool,
     controls: {
-      ...stringControl('coolNameBro'),
-      ...stringControl('aDefault', 'yes!')
+      personName: numberControl()
     }
   }
 })

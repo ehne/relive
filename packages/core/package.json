@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "eslint 'src' --ext ts,tsx",
-    "start": "relive run test.tsx",
+    "start": "npx @relivecg/cli run test.tsx",
     "build": "tsc -d"
   },
   "bugs": {

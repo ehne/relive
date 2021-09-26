@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { styled } from '../theme'
-import Row from './Row'
+import {Row} from './Row'
 import { Button } from './Buttons'
-import StringControl from './StringControl'
+import StringControlComponent from './StringControlComponent'
+import NumberControlComponent from './NumberControlComponent'
 
 const CardBase = styled('div', {
   padding: '$2',
@@ -32,20 +33,19 @@ const Card = ({ name, jetPeer, sceneObjControls }:{ name:string, jetPeer, key:st
   const [data, setData] = useState({})
 
   const controls = Object.keys(sceneObjControls).map(i => {
-    const ControlComponent = {
-      string: StringControl
+    let ControlComponent = {
+      string: StringControlComponent,
+      number: NumberControlComponent
     }[sceneObjControls[i].type]
+    
+    console.log(sceneObjControls[i])
 
     return (
-      <Row key={i}>
+      <Row key={i} input>
         <ControlComponent name={i} data={data} setData={setData} {...sceneObjControls[i]} />
       </Row>
     )
   })
-
-  useEffect(() => {
-    jetPeer.call(`send/${name}`, [data])
-  }, [])
 
   return (
     <CardBase>

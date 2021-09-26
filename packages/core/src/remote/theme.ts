@@ -27,7 +27,8 @@ export const { styled, css } = createStitches({
       3: '32px'
     },
     sizes: {
-      rowHeight: '32px'
+      rowHeight: '32px',
+      controlWidth: '200px'
     },
     transitions: {
       hover: '0.07s opacity linear'

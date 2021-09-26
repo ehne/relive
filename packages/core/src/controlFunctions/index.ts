@@ -1,1 +1,0 @@
-export { stringControl } from './stringControl'
