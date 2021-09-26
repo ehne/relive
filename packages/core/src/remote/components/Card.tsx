@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { styled } from '../theme'
-import {Row} from './Row'
+import { Row } from './Row'
 import { Button } from './Buttons'
 import StringControlComponent from './StringControlComponent'
 import NumberControlComponent from './NumberControlComponent'
@@ -33,11 +33,11 @@ const Card = ({ name, jetPeer, sceneObjControls }:{ name:string, jetPeer, key:st
   const [data, setData] = useState({})
 
   const controls = Object.keys(sceneObjControls).map(i => {
-    let ControlComponent = {
+    const ControlComponent = {
       string: StringControlComponent,
       number: NumberControlComponent
     }[sceneObjControls[i].type]
-    
+
     console.log(sceneObjControls[i])
 
     return (

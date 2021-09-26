@@ -11,9 +11,8 @@ export interface ScreenProps {
   jetPort: string
 }
 
-
 export interface StringControlType {
-  type: "string",
+  type: 'string',
   defaultString?: string
 }
 

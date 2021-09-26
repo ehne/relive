@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {ValueInput} from './ValueInput'
+import { ValueInput } from './ValueInput'
 
 const StringControlComponent = ({ data, setData, name, defaultString = '' }:{ data, setData, name:string, defaultString:string }) => {
   // sets the default string

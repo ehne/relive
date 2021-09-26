@@ -3,7 +3,6 @@ import jet from 'node-jet'
 import { SceneContext } from './SceneContext'
 import { ScreenProps } from './types'
 
-
 const Scene = ({ name, Component, jetPort }:ScreenProps) => {
   const [jetPeer, setJetPeer] = useState(new jet.Peer({ port: jetPort }))
   useEffect(() => {

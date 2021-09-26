@@ -1,7 +1,6 @@
 import React from 'react'
 import { styled } from '../theme'
 
-
 const StyledRow = styled('div', {
   display: 'flex',
   width: '100%',
@@ -34,4 +33,4 @@ const Row = (props) => {
   return (<StyledRow {...props} />)
 }
 
-export {Row}
+export { Row }
