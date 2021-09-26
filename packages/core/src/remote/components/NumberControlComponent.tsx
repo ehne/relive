@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import {ValueInput} from './ValueInput'
 
-
-
 const NumberControlComponent = ({ data, setData, name, defaultNumber }:{ data, setData, name:string, defaultNumber:Number }) => {
 
   useEffect(() => {
