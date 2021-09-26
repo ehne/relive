@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { RiExternalLinkLine } from 'react-icons/ri'
+
 import { styled } from '../theme'
 import { Row } from './Row'
 import { Button } from './Buttons'
 import StringControlComponent from './StringControlComponent'
 import NumberControlComponent from './NumberControlComponent'
-import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 const CardBase = styled('div', {
   padding: '$2',
@@ -22,7 +23,9 @@ const SceneLink = styled('a', {
   textDecoration: 'none',
   '&:hover': {
     opacity: 0.7
-  }
+  },
+  height: '$rowHeight',
+  width: '$rowHeight'
 })
 const Title = styled('h2', {
   display: 'block',
@@ -52,7 +55,7 @@ const Card = ({ name, jetPeer, sceneObjControls }:{ name:string, jetPeer, key:st
     <CardBase>
       <Row>
         <Title>{name}</Title>
-        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer"><ArrowTopRightIcon/></SceneLink>
+        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer"><RiExternalLinkLine/></SceneLink>
       </Row>
       {controls}
       <Row>
