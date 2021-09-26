@@ -23,6 +23,7 @@
     "url": "https://github.com/ehne/relive/issues"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.0.3",
     "@stitches/react": "^1.0.0",
     "assert": "^2.0.0",
     "events": "^3.3.0",

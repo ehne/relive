@@ -4,6 +4,7 @@ import { Row } from './Row'
 import { Button } from './Buttons'
 import StringControlComponent from './StringControlComponent'
 import NumberControlComponent from './NumberControlComponent'
+import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 const CardBase = styled('div', {
   padding: '$2',
@@ -51,7 +52,7 @@ const Card = ({ name, jetPeer, sceneObjControls }:{ name:string, jetPeer, key:st
     <CardBase>
       <Row>
         <Title>{name}</Title>
-        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer">↗</SceneLink>
+        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer"><ArrowTopRightIcon/></SceneLink>
       </Row>
       {controls}
       <Row>
