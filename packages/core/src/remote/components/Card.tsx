@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { RiExternalLinkLine } from 'react-icons/ri'
 
 import { styled } from '../theme'
 import { Row } from './Row'
@@ -55,7 +54,7 @@ const Card = ({ name, jetPeer, sceneObjControls }:{ name:string, jetPeer, key:st
     <CardBase>
       <Row>
         <Title>{name}</Title>
-        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer"><RiExternalLinkLine/></SceneLink>
+        <SceneLink href={`/scene/${name}`} target="_blank" rel="noopener noreferrer">↗️</SceneLink>
       </Row>
       {controls}
       <Row>
