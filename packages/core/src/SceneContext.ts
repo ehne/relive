@@ -1,3 +1,11 @@
 import { createContext } from 'react'
 
-export const SceneContext = createContext()
+const init = {
+  jetPeer: '',
+  name: ''
+} as {
+  jetPeer: any,
+  name: string
+}
+
+export const SceneContext = createContext(init)

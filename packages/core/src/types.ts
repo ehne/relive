@@ -1,13 +1,13 @@
 import React from 'react'
 
 export interface SceneObject {
-  component: React.Node,
+  component: React.ElementType,
   controls: Record<string, any>
 }
 
 export interface ScreenProps {
   name: string,
-  Component: React.Node,
+  Component: React.ElementType,
   jetPort: string
 }
 
@@ -20,3 +20,7 @@ export interface NumberControlType {
   type: 'number'
   defaultNumber?: Number
 }
+
+export type Interval = [number, number]
+
+export type ExtrapolateType = 'clamp'

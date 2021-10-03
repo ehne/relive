@@ -5,11 +5,13 @@ const NumberControlComponent = ({ data, setData, name, defaultNumber }:{ data, s
   useEffect(() => {
     setData(d => ({ ...d, [name]: Number(defaultNumber) }))
   }, [])
-
+  const handler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData(d => ({ ...d, [name]: Number(e.target.value) }))
+  }
   return (
     <>
       {name}
-      <ValueInput type="number" pattern="[0-9]*" value={data[name]} onInput={e => setData(d => ({ ...d, [name]: Number(e.target.value) }))}/>
+      <ValueInput type="number" pattern="[0-9]*" value={data[name]} onInput={handler}/>
     </>
   )
 }

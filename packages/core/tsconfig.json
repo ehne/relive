@@ -8,5 +8,9 @@
     "outDir": "dist",
     "rootDir": "src",
     "jsx": "react-jsx"
-  }
+  },
+  "exclude": [
+    "test.tsx",
+    "dist"
+  ]
 }

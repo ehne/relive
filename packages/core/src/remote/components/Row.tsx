@@ -26,7 +26,7 @@ const StyledInputRow = styled('div', {
   }
 })
 
-const Row = (props) => {
+const Row = (props: any) => {
   if (props.input) {
     return (<StyledInputRow {...props} />)
   }

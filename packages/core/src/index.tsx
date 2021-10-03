@@ -5,6 +5,7 @@ import { Route } from 'wouter'
 import Scene from './Scene'
 import Remote from './remote/Remote'
 import useRelive from './useRelive'
+import interpolate from './interpolate'
 import { SceneObject } from './types'
 
 const registerRelive = async (components:Record<string, SceneObject>) => {
@@ -25,7 +26,7 @@ const registerRelive = async (components:Record<string, SceneObject>) => {
     </>
   )
   render(
-    <Suspense>
+    <Suspense fallback={<></>}>
       <App/>
     </Suspense>
     , document.querySelector('#reliveMain')
@@ -34,5 +35,6 @@ const registerRelive = async (components:Record<string, SceneObject>) => {
 
 export {
   useRelive,
-  registerRelive
+  registerRelive,
+  interpolate
 }

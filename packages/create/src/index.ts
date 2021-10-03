@@ -19,7 +19,7 @@ registerRelive({
   'hello world': {
     component: helloWorld,
     controls: {
-      ...stringControl('name'),
+      name: stringControl()
     }
   }
 })`
