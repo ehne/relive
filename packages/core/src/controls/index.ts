@@ -1,7 +1,7 @@
 import { stringControl } from './stringControl'
 import { numberControl } from './numberControl'
 
-export {
+export default {
   stringControl,
   numberControl
 }

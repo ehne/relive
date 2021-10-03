@@ -94,7 +94,7 @@ The scene can be opened by clicking on the arrow in the corner of the control. I
 What we've got going is great and all, but it doesn't have any data passing into it. We can fix that by adding a control. Let's go with a basic `stringControl`.
 
 ```tsx {8}
-import { useRelive, registerRelive, stringControl } from '@relive/core'
+import { useRelive, registerRelive, controls } from '@relive/core'
 
 // ...
 
@@ -102,7 +102,7 @@ registerRelive({
   sceneName: {
     component: HelloWorld,
     controls: {
-      name: stringControl(),
+      name: controls.stringControl(),
     }
   }
 })

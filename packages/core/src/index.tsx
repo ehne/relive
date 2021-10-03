@@ -7,6 +7,7 @@ import Remote from './remote/Remote'
 import useRelive from './useRelive'
 import interpolate from './interpolate'
 import { SceneObject } from './types'
+import controls from './controls'
 
 const registerRelive = async (components:Record<string, SceneObject>) => {
   const jetPort = await fetch(`http://${window.location.host}/internalport`).then(d => d.text())
@@ -36,5 +37,6 @@ const registerRelive = async (components:Record<string, SceneObject>) => {
 export {
   useRelive,
   registerRelive,
-  interpolate
+  interpolate,
+  controls
 }

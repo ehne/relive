@@ -1,6 +1,5 @@
 import React from 'react'
-import { registerRelive, useRelive, interpolate } from './src/index'
-import { numberControl, stringControl } from './src/controls'
+import { registerRelive, useRelive, interpolate, controls } from './src/index'
 
 const cool = () => {
   const { data, currentFrame, frameLastUpdated } = useRelive()
@@ -14,7 +13,7 @@ registerRelive({
   cool: {
     component: cool,
     controls: {
-      personName: numberControl()
+      personName: controls.numberControl()
     }
   }
 })

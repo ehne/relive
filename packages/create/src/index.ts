@@ -6,7 +6,7 @@ const files = (name) => [
   [
     'index.jsx',
     `import React from 'react'
-import { registerRelive, useRelive, stringControl } from '@relivecg/core'
+import { registerRelive, useRelive, controls } from '@relivecg/core'
 
 const helloWorld = () => {
   const { data, currentFrame, frameLastUpdated } = useRelive()
@@ -19,7 +19,7 @@ registerRelive({
   'hello world': {
     component: helloWorld,
     controls: {
-      name: stringControl()
+      name: controls.stringControl()
     }
   }
 })`
